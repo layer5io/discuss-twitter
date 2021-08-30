@@ -1,5 +1,5 @@
-# layer5-repo-template
-This repository is used as the boilerplate for consistency across all Layer5 repos.
+# discuss-twitter
+This repository is used as the component for displaying Layer5 twitter feed on <a href="https://discuss.layer5.io/">Layer5's discussion forum</a>.
 
 <div>&nbsp;</div>
 
