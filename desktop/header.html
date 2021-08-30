@@ -1,0 +1,62 @@
+<script type = 'text/javascript' src = 'https://platform.twitter.com/widgets.js' charset = 'utf-8'></script>
+
+<script type="text/x-handlebars" data-template-name="components/categories-and-latest-topics">
+    <div class="column categories">
+      {{categories-only categories=categories}}
+    </div>
+    
+    <div class="column">
+      {{categories-topic-list topics=topics filter="latest" class="latest-topic-list"}}
+      <div id = 'sidebar' class = 'sb-loading'>
+        {{ mount-widget widget='twitter-widget' }}
+      </div>
+    </div>
+</script>
+
+<script type="text/x-handlebars" data-template-name="components/topic-list">
+    {{plugin-outlet
+      name="before-topic-list-body"
+      args=(hash
+        topics=topics
+        selected=selected
+        bulkSelectEnabled=bulkSelectEnabled
+        lastVisitedTopic=lastVisitedTopic
+        discoveryList=discoveryList
+        hideCategory=hideCategory)
+      tagName=""
+      connectorTagName=""}}
+    <tbody>
+        {{raw "topic-list-header"
+          canBulkSelect=canBulkSelect
+          toggleInTitle=toggleInTitle
+          hideCategory=hideCategory
+          showPosters=showPosters
+          showLikes=showLikes
+          showOpLikes=showOpLikes
+          showParticipants=showParticipants
+          order=order
+          ascending=ascending
+          sortable=sortable
+          listTitle=listTitle
+          bulkSelectEnabled=bulkSelectEnabled}}
+      {{#each filteredTopics as |topic|}}
+        {{topic-list-item topic=topic
+                          bulkSelectEnabled=bulkSelectEnabled
+                          showTopicPostBadges=showTopicPostBadges
+                          hideCategory=hideCategory
+                          showPosters=showPosters
+                          showParticipants=showParticipants
+                          showLikes=showLikes
+                          showOpLikes=showOpLikes
+                          expandGloballyPinned=expandGloballyPinned
+                          expandAllPinned=expandAllPinned
+                          lastVisitedTopic=lastVisitedTopic
+                          selected=selected
+                          tagsForUser=tagsForUser}}
+        {{raw "list/visited-line" lastVisitedTopic=lastVisitedTopic topic=topic}}
+      {{/each}}
+    </tbody>
+    <div id='sidebar' class = 'sb-loading'>
+        {{ mount-widget widget='twitter-widget' }}
+    </div>
+    </script>

@@ -1,0 +1,4 @@
+paths_relations:
+  default: /:layer5|meshery:mesheryio|smp:smp_spec|getnighthawk:smp_spec
+  type: list
+  description: 'Paste your relations in format - <code>path:screenName</code>'

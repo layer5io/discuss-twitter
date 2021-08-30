@@ -1,0 +1,27 @@
+#sidebar {
+  flex: 0 1 40%;
+  padding: 10px 0;
+  @media (max-width: 900px) {
+    display: none;
+  }
+}
+
+#twitter-sidebar {
+  margin-top: 50px;
+  width: 100%;
+  height: 600px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.sb-loading {
+  background-color: #fbfbfd;
+}
+
+.topic-list {
+  display: flex;
+  flex-flow: row wrap;
+  tbody {
+    flex: 1 1 55%;
+  }
+}

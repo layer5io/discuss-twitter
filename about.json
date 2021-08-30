@@ -1,0 +1,8 @@
+{
+  "about_url": "https://github.com/rustmn/discourse-twitter-feed/blob/master/README.md",
+  "license_url": "https://github.com/rustmn/discourse-twitter-feed/blob/master/LICENSE",
+  "assets": {
+  },
+  "name": "Twitter-feed",
+  "component": true
+}
