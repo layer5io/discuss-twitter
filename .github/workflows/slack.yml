@@ -13,4 +13,4 @@ jobs:
         SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
       uses: pullreminders/slack-action@master
       with:
-        args: '{\"channel\":\"CSK7N9TGX\",\"text\":\"${{ github.actor }} just starred discuss-twitter repo! (https://github.com/layer5io/discuss-twitter/stargazers) Total ⭐️: ${{env.STARS}}\"}'
+        args: '{\"channel\":\"CSK7N9TGX\",\"text\":\"${{ github.actor }} just starred discuss-twitter! (https://github.com/layer5io/discuss-twitter/stargazers) Total ⭐️: ${{env.STARS}}\"}'
